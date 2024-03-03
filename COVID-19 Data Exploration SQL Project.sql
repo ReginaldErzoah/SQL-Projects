@@ -10,7 +10,7 @@ ORDER BY 1,2
 
 SELECT Location,date,total_cases,total_deaths,TRY_CAST(total_deaths AS float) / NULLIF(TRY_CAST(total_cases AS float), 0) * 100 AS DeathPercentage
 FROM PortfolioProject.dbo.CovidDeaths
-WHERE Location = 'Ghana' AND continent is not null
+WHERE continent is not null
 ORDER BY 1,2
 
 --Total Cases vs Population
