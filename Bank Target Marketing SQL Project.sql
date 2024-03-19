@@ -1,16 +1,4 @@
 --EXPLORING CLIENTS DEMOGRAPHICS & DATA SUMMARY
-
---The Average Age of Clients
-
-SELECT AVG(CAST(age AS float)) AS average_age
-FROM BankTargeting.dbo.Target
-
---Job Distibution of Clients
-
-SELECT job, COUNT(*) AS job_count
-FROM BankTargeting.dbo.Target
-GROUP BY job
-
 -- Average Balance per Marital Status of Clients
 
 SELECT marital,AVG(CAST(balance AS float)) AS average_balance
@@ -40,11 +28,11 @@ CASE
 	ELSE 'Elderly'
 END;
 
--- Segementing Clients by Job & Marital Status
+-- Segementing Clients by Job 
 
-SELECT job, marital, COUNT(*) AS Count
+SELECT job, COUNT(*) AS Count
 FROM BankTargeting.dbo.Target
-GROUP BY job, marital
+GROUP BY job
 
 
 --Binary Target Test Based on Whether Client Made Deposit or Not.
