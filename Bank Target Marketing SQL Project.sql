@@ -1,10 +1,4 @@
 --EXPLORING CLIENTS DEMOGRAPHICS & DATA SUMMARY
--- Average Balance per Marital Status of Clients
-
-SELECT marital,AVG(CAST(balance AS float)) AS average_balance
-FROM BankTargeting.dbo.Target
-GROUP BY marital
-
 -- Clients per Deposit Status
 
 SELECT deposit, COUNT(*) AS count
